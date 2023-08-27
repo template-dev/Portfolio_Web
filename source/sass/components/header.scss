@@ -1,0 +1,155 @@
+.header-container {
+	@media (min-width: $desktop-width) {
+		max-width: $desktop-width;
+		margin: 0 auto;
+	}
+}
+
+.header__navigation {
+	width: 100%;
+	min-width: 320px;
+	display: flex;
+	flex-direction: column;
+	
+	@media (min-width: $tablet-width) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.header__logo-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 50px 0 50px;
+}
+
+.header__logo {
+	font-size: 32px;
+	color: #ffffff;
+	text-decoration: none;
+	letter-spacing: 5px;
+	font-weight: 600;
+	
+	@media (min-width: $desktop-width) {
+	{
+		display: none;
+	}
+}
+
+.header__logo-tablet {
+	font-size: 32px;
+	color: #ffffff;
+	text-decoration: none;
+	letter-spacing: 5px;
+	font-weight: 600;
+}
+
+.header-nav__item {
+	text-align: center;
+	
+	&:first-child {
+		border-top: 1px solid lighten($body-color, 7px);
+	}
+	
+	&:not(:last-child) {
+		border-bottom: 1px solid lighten($body-color, 7px);
+	}
+	
+	@media (min-width: $tablet-width) {
+		&:first-child {
+			border-top: 0 solid lighten($body-color, 7px);
+		}
+	
+		&:not(:last-child) {
+			border-bottom: 0 solid lighten($body-color, 7px);
+		}
+	}
+}
+
+.header-nav__link {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	text-decoration: none;
+	color: $text-color;
+	font-size: 18px;
+	letter-spacing: 2px;
+	transition: 0.3s;
+	
+	&:hover {
+		background-color: darken($body-color, 3%);
+		transition: 0.3s;
+	}
+	
+	@media (min-width: $tablet-width) {
+		padding: 12px 30px;
+		margin: 0 5px;
+		border-radius: 25px;
+		outline-offset: -3px;
+		outline: 3px solid rgba(0, 0, 0, 0);
+		&:hover {
+			background-color: transparent;
+			outline: 3px solid $hover-active-nav-color;
+			border-radius: 25px;
+		}
+	}
+}
+
+.nav-link__active {
+	background-color: darken($body-color, 3%);
+	color: $hover-active-nav-color;
+	
+	@media (min-width: $tablet-width) {
+		position: relative;
+		background-color: transparent;
+		outline: 3px solid $hover-active-nav-color;
+		border-radius: 25px;
+	}
+}
+
+.hiring__button {
+	display: block;
+	background-color: $hiring-button-color;
+	border-radius: 25px;
+	width: 80%;
+	padding: 12px 40px 12px 40px;
+	margin: 10px auto;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-size: 18px;
+	color: $text-color;
+	transition: 0.3s;
+	box-shadow: 2px 5px 10px 0 lighten($body-color, 10%);
+		
+	&:hover {
+		outline: 3px solid lighten($hiring-button-color, 3%);
+		background-color: darken($hiring-button-color, 5%);
+		outline-offset: -3px;
+		box-shadow: 0 0 0 0 lighten($body-color, 10%);
+	}
+	
+	@media (min-width: $tablet-width) {
+		margin-top: 0;
+		margin-left: 20px;
+	}
+}
+
+.toggle {
+	background-image: url('@img/svg/burger-toggle.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: 0;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: transparent;
+	outline: 2px solid lighten($body-color, 10%);
+	padding: 18px;
+	
+	@media (min-width: $tablet-width) {
+		display: none;
+	}
+}
