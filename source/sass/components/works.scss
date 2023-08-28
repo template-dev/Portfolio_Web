@@ -1,0 +1,85 @@
+.main-container {
+	@media (min-width: $desktop-width) {
+		width: 100%;
+		max-width: $desktop-width;
+		margin: 0 auto;
+	}
+}
+
+.main__works-list {
+	display: grid;
+	grid-template-columns: repeat(1, min(300px));
+	column-gap: 20px;
+	row-gap: 40px;
+	flex-wrap: wrap;
+	list-style-type: none;
+	padding: 0;
+	justify-content: center;
+	
+	@media (min-width: $tablet-width) {
+		grid-template-columns: repeat(2, 320px);
+	}
+	
+	@media (min-width: $desktop-width) {
+		grid-template-columns: repeat(4, 340px);
+	}
+}
+
+.main__works-link {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	background: linear-gradient(180deg, rgba(131, 130, 138, 0.3) 0%, rgba(131, 130, 138, 0.3) 100%);
+	padding: 10px;
+	border-radius: 10px;
+	height: 100%;
+	text-decoration: none;
+	
+	img {
+		border-radius: 10px;
+		
+		@media (min-width: $mobile-width) {
+			height: 220px;
+		}
+		
+		@media (min-width: $tablet-width) {
+			height: 260px;
+		}
+		
+		@media (min-width: $desktop-width) {
+			height: 250px;
+		}
+	}
+	
+	&:hover {
+		background: linear-gradient(180deg, rgba(131, 130, 138, 0.4) 0%, rgba(131, 130, 138, 0.4) 100%);
+	}
+}
+
+.works-container__title {
+	font-size: 38px;
+	font-weight: 600;
+	display: block;
+	text-align: center;
+	margin-left: -10px;
+	
+	@media (min-width: $desktop-width) {
+		text-align: left;
+		margin-left: 10px;
+	}
+}
+
+.main__works-title {
+	text-decoration: none;
+	color: $text-color;
+	letter-spacing: 1px;
+	font-size: 18px;
+}
+
+.main__works-description {
+	text-decoration: none;
+	color: $description-color;
+	letter-spacing: 1px;
+	font-size: 14px;
+	margin-top: -10px;
+}
